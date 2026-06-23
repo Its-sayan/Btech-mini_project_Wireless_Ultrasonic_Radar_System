@@ -1,6 +1,3 @@
-Here's the corrected and enhanced README.md with all technical inaccuracies fixed and improved presentation:
-
-```markdown
 # 📡 Wireless Ultrasonic Radar System
 
 ![Arduino](https://img.shields.io/badge/Arduino-Uno-00979D?style=for-the-badge&logo=arduino&logoColor=white)
@@ -22,20 +19,6 @@ Here's the corrected and enhanced README.md with all technical inaccuracies fixe
 
 ---
 
-## 📁 Repository Structure
-
-```text
-Btech-mini_project_Wireless_Ultrasonic_Radar_System/
-├── results/
-│   ├── Data Flow Diagram.png          # System architecture visualization
-│   ├── Timing & Signal Waveform Diagram.png  # Signal timing analysis
-│   └── Visual Circuit Diagram.png     # Complete wiring schematic
-├── README.md                          # Project documentation
-└── main.cpp                           # Core firmware implementation
-```
-
----
-
 ## 🏗 System Architecture & Data Flow
 
 The system architecture cleanly decouples the physical sensing layer from the local and remote presentation layers. The core logic executes on the Arduino Uno, while network tasks are delegated to the ESP8266's hardware TCP/IP stack.
@@ -43,8 +26,8 @@ The system architecture cleanly decouples the physical sensing layer from the lo
 ```
 ┌─────────────┐    Acoustic    ┌──────────┐    Digital    ┌────────────┐    Serial    ┌──────────┐    HTTP    ┌────────────────┐
 │  Physical   │ ◄────────────► │  HC-SR04 │ ◄───────────► │  Arduino   │ ◄──────────► │ ESP8266  │ ◄────────► │  Remote Client │
-│   Target    │    Waves       │  Sensor  │   Signals     │    Uno     │   (UART)    │ (ESP-01) │  Request  │    Browser     │
-└─────────────┘                └──────────┘               └────────────┘              └──────────┘           └────────────────┘
+│   Target    │    Waves       │  Sensor  │   Signals     │    Uno     │   (UART)     │ (ESP-01) │  Request   │    Browser     │
+└─────────────┘                └──────────┘               └────────────┘              └──────────┘            └────────────────┘
                                                                   │
                                                                   │ (Parallel)
                                                                   ▼
